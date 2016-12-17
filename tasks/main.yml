@@ -6,3 +6,5 @@
     that:
         - ansible_os_family in ['OpenBSD', 'Debian']
         - ansible_distribution_release in ['6.0', 'xenial']
+        - ansible_default_ipv4 is defined # Test networking facts.
+        - "'debian_bootstrap' in group_names or 'openbsd_bootstrap' in group_names"

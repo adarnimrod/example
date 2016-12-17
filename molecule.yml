@@ -45,3 +45,5 @@ docker:
     environment:
         DEBIAN_FRONTEND: noninteractive
         container: docker
+    ansible_groups:
+    - debian_bootstrap
