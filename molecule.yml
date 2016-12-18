@@ -8,6 +8,7 @@ ansible:
 dependency:
   name: galaxy
   requirements_file: tests/requirements.yml
+  command: ansible-galaxy install git+file://$(pwd),$(git rev-parse --abbrev-ref HEAD) -p .molecule/roles
 
 vagrant:
   providers:
